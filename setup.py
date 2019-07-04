@@ -1,12 +1,23 @@
+import os
 from setuptools import find_packages, setup
 
 
+here = os.path.abspath(os.path.dirname(__file__))
+
+
+about = {}
+with open(os.path.join(here, 'gps', '__version__.py'), 'r') as f:
+    exec(f.read(), about)
+
+
 setup(
-    name="gps",
-    version="3.9",
+    name=about['__title__'],
+    version=about['__version__'],
+    author=about['__author__'],
+    author_email=about['__author_email__'],
+    description=about['__description__'],
+    license=about['__license__'],
+    url=about['__url__'],
     packages=find_packages(),
-    description="GPSD is a service daemon that handles GPSes and other navigation-related sensors reporting over USB, serial, TCP/IP, or UDP connections and presents reports in a well-documented JSON application on port 2749.",
-    license="BSD",
     keywords="gsp",
-    url='https://savannah.nongnu.org/projects/gpsd/',
 )

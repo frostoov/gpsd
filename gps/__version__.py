@@ -1,0 +1,7 @@
+__title__ = 'gps'
+__description__ = 'GPSD is a service daemon that handles GPSes and other navigation-related sensors reporting over USB, serial, TCP/IP, or UDP connections and presents reports in a well-documented JSON application on port 2749.'
+__url__ = 'https://gitlab.com/gpsd/gpsd'
+__version__ = '1.19'
+__author__ = 'Eric S. Raymond'
+__author_email__ = 'esr@thyrsus.com'
+__license__ = 'BSD'
